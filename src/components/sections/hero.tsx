@@ -1,11 +1,18 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "motion/react";
-import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight, MapPin, GraduationCap, Briefcase, Heart } from "lucide-react";
 import Link from "next/link";
 import { ParticlePortrait } from "@/components/ui/particle-portrait";
 
 const easeOutExpo: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
+const quickInfo = [
+  { icon: MapPin, label: "Based in", value: "Sydney, AU" },
+  { icon: GraduationCap, label: "Studying", value: "CS + AI at UNSW" },
+  { icon: Briefcase, label: "Working at", value: "AI Startup" },
+  { icon: Heart, label: "Hobbies", value: "Swimming, Ping Pong" },
+];
 
 export function Hero() {
   const prefersReducedMotion = useReducedMotion();
@@ -79,14 +86,6 @@ export function Hero() {
       >
         {/* Left: Content */}
         <div className="order-2 lg:order-1 text-center lg:text-left">
-          {/* Overline with badge */}
-          <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-3 mb-6">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--accent)]/10 border border-[var(--accent)]/20 rounded-full">
-              <Sparkles size={14} className="text-[var(--accent)]" />
-              <span className="text-xs font-medium text-[var(--accent)]">Available for opportunities</span>
-            </span>
-          </motion.div>
-
           {/* Overline */}
           <motion.p
             variants={itemVariants}
@@ -136,25 +135,23 @@ export function Hero() {
             </a>
           </motion.div>
 
-          {/* Quick stats */}
+          {/* Quick Info Cards */}
           <motion.div
             variants={itemVariants}
-            className="flex items-center justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-[var(--border)]"
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-10 pt-8 border-t border-[var(--border)]"
           >
-            <div>
-              <p className="text-2xl font-bold text-[var(--text-primary)]">1/30</p>
-              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wider">NIAS Selection</p>
-            </div>
-            <div className="w-px h-10 bg-[var(--border)]" />
-            <div>
-              <p className="text-2xl font-bold text-[var(--text-primary)]">100+</p>
-              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wider">IISc Visitors</p>
-            </div>
-            <div className="w-px h-10 bg-[var(--border)]" />
-            <div>
-              <p className="text-2xl font-bold text-[var(--text-primary)]">25kg</p>
-              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wider">Bridge Load</p>
-            </div>
+            {quickInfo.map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -2, scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+                className="p-3 bg-[var(--bg-card)]/60 backdrop-blur-sm border border-[var(--border)] rounded-xl text-center hover:border-[var(--accent)]/30 transition-colors"
+              >
+                <item.icon size={16} className="mx-auto text-[var(--accent)] mb-1.5" />
+                <p className="text-[10px] text-[var(--text-muted)] uppercase tracking-wider mb-0.5">{item.label}</p>
+                <p className="text-xs font-medium text-[var(--text-primary)]">{item.value}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
 
