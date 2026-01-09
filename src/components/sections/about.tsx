@@ -2,19 +2,109 @@
 
 import { motion } from "motion/react";
 import { Reveal } from "@/components/ui/reveal";
-import { MapPin, GraduationCap, Briefcase, Heart, Code } from "lucide-react";
+import { MapPin, GraduationCap, Briefcase, Heart } from "lucide-react";
 
-const technologies = [
-  "Python",
-  "TensorFlow",
-  "FastAPI",
-  "React.js",
-  "MCP Servers",
-  "Agentic AI",
-  "TypeScript",
-  "Data Analysis",
-  "Excel (Pivots, VLOOKUP)",
+// Tech stack with categories and visual properties
+const techStack = [
+  { name: "Python", category: "Language", color: "#3776AB", size: "large" },
+  { name: "TensorFlow", category: "ML/AI", color: "#FF6F00", size: "medium" },
+  { name: "FastAPI", category: "Backend", color: "#009688", size: "medium" },
+  { name: "React.js", category: "Frontend", color: "#61DAFB", size: "large" },
+  { name: "TypeScript", category: "Language", color: "#3178C6", size: "medium" },
+  { name: "Agentic AI", category: "ML/AI", color: "#8B5CF6", size: "large" },
+  { name: "MCP Servers", category: "Infrastructure", color: "#06B6D4", size: "medium" },
+  { name: "Data Analysis", category: "Skills", color: "#F97316", size: "medium" },
+  { name: "Excel", category: "Tools", color: "#217346", size: "small" },
 ];
+
+function TechCard({ tech, index }: { tech: typeof techStack[0]; index: number }) {
+  const sizeClasses = {
+    large: "col-span-2 row-span-2",
+    medium: "col-span-1 row-span-1",
+    small: "col-span-1 row-span-1",
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ delay: index * 0.08, duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true }}
+      whileHover={{ 
+        scale: 1.02, 
+        y: -4,
+        transition: { duration: 0.2 } 
+      }}
+      className={`${sizeClasses[tech.size as keyof typeof sizeClasses]} relative group cursor-pointer`}
+    >
+      {/* Glow effect on hover */}
+      <div 
+        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"
+        style={{ backgroundColor: tech.color }}
+      />
+      
+      {/* Card content */}
+      <div className="relative h-full p-5 bg-[var(--bg-card)]/80 backdrop-blur-sm border border-[var(--border)] rounded-2xl overflow-hidden group-hover:border-[var(--border-hover)] transition-all duration-300">
+        {/* Gradient accent line */}
+        <div 
+          className="absolute top-0 left-0 right-0 h-[2px] opacity-60 group-hover:opacity-100 transition-opacity"
+          style={{ background: `linear-gradient(90deg, transparent, ${tech.color}, transparent)` }}
+        />
+        
+        {/* Floating orb decoration */}
+        <div 
+          className="absolute -right-4 -bottom-4 w-24 h-24 rounded-full opacity-10 group-hover:opacity-20 blur-2xl transition-opacity duration-500"
+          style={{ backgroundColor: tech.color }}
+        />
+        
+        {/* Content */}
+        <div className="relative z-10 h-full flex flex-col justify-between">
+          <div>
+            <span 
+              className="inline-block px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider rounded-full mb-3 border"
+              style={{ 
+                color: tech.color, 
+                borderColor: `${tech.color}40`,
+                backgroundColor: `${tech.color}10`
+              }}
+            >
+              {tech.category}
+            </span>
+            <h3 className={`font-semibold text-[var(--text-primary)] group-hover:text-white transition-colors ${
+              tech.size === "large" ? "text-xl md:text-2xl" : "text-base md:text-lg"
+            }`}>
+              {tech.name}
+            </h3>
+          </div>
+          
+          {/* Decorative icon/pattern for large cards */}
+          {tech.size === "large" && (
+            <div className="mt-4">
+              <div className="flex gap-1">
+                {[...Array(4)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="w-1.5 h-8 rounded-full opacity-40"
+                    style={{ backgroundColor: tech.color }}
+                    animate={{ 
+                      height: [32, 16, 24, 32],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      delay: i * 0.2,
+                      ease: "easeInOut"
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export function About() {
   return (
@@ -54,33 +144,38 @@ export function About() {
           </div>
         </Reveal>
 
+        {/* Modern Bento Grid Tech Stack */}
         <Reveal delay={0.15}>
-          <div className="mt-12">
-            <div className="flex items-center gap-2 mb-4">
-              <Code size={18} className="text-[var(--accent)]" />
-              <p className="text-sm font-semibold text-[var(--text-primary)] tracking-wide uppercase">
-                Technologies I've learned along the way
-              </p>
+          <div className="mt-16">
+            <div className="text-center mb-8">
+              <motion.p 
+                className="text-sm font-semibold text-[var(--text-muted)] tracking-[0.2em] uppercase mb-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
+                Tech Stack
+              </motion.p>
+              <motion.h3 
+                className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Tools I Work With
+              </motion.h3>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {technologies.map((tech, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="px-3 py-1.5 text-sm bg-[var(--bg-card)] border border-[var(--border)] rounded-full text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
-                >
-                  {tech}
-                </motion.span>
+            
+            <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[80px] md:auto-rows-[100px]">
+              {techStack.map((tech, index) => (
+                <TechCard key={tech.name} tech={tech} index={index} />
               ))}
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={0.2}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             {[
               { icon: MapPin, label: "Based in", value: "Sydney, AU" },
               { icon: GraduationCap, label: "Studying", value: "CS + AI at UNSW" },
