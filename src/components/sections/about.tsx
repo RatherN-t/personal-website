@@ -2,7 +2,19 @@
 
 import { motion } from "motion/react";
 import { Reveal } from "@/components/ui/reveal";
-import { MapPin, GraduationCap, Briefcase, Heart } from "lucide-react";
+import { MapPin, GraduationCap, Briefcase, Heart, Code } from "lucide-react";
+
+const technologies = [
+  "Python",
+  "TensorFlow",
+  "FastAPI",
+  "React.js",
+  "MCP Servers",
+  "Agentic AI",
+  "TypeScript",
+  "Data Analysis",
+  "Excel (Pivots, VLOOKUP)",
+];
 
 export function About() {
   return (
@@ -23,28 +35,47 @@ export function About() {
           <div className="space-y-6 text-lg text-[var(--text-secondary)] leading-relaxed">
             <p>
               I'm <span className="text-[var(--text-primary)] font-medium">Yash Mittal</span>, 
-              a first-year Computer Science student at <span className="text-[var(--accent)]">UNSW Sydney</span>, 
-              majoring in Artificial Intelligence with a minor in Finance. I'm passionate about building 
-              intelligent systems that bridge the gap between cutting-edge technology and real-world impact.
+              currently pursuing a Computer Science degree with a major in <span className="text-[var(--accent)]">Artificial Intelligence</span> at 
+              the University of New South Wales.
             </p>
 
             <p>
-              My journey into tech started early — at 14, I was selected as one of <span className="text-[var(--text-primary)] font-medium">30 students nationwide</span> for 
-              the National Institute of Advanced Studies (NIAS) program, attending weekend classes with 
-              IISc professors. That experience sparked my love for prototyping and problem-solving.
+              Right now, I'm working at an <span className="text-[var(--text-primary)] font-medium">AI startup</span> where 
+              I designed a cost optimiser to help a supply chain company save money. I love tackling 
+              interesting challenges, solving problems, and developing innovative solutions that 
+              make a real impact.
             </p>
 
             <p>
-              From building <span className="text-[var(--accent)]">shiftable road dividers</span> with LEGO EV3 and ultrasonic sensors, 
-              to creating ML-powered rock-paper-scissors games, I thrive at the intersection of 
-              hardware, software, and human-centered design.
+              Outside of work, I enjoy the occasional swim, playing table tennis, and I'm a 
+              proud tech enthusiast. I've watched every <span className="text-[var(--accent)]">WWDC</span> keynote 
+              and I'm always excited to explore what's next in technology.
             </p>
+          </div>
+        </Reveal>
 
-            <p>
-              Currently, I'm working as an <span className="text-[var(--text-primary)] font-medium">AI Engineer Intern at Anthrobyte.ai</span>, 
-              where I'm building AI-powered applications. When I'm not coding, you'll find me 
-              mentoring students, exploring new technologies, or diving into the latest in AI research.
-            </p>
+        <Reveal delay={0.15}>
+          <div className="mt-12">
+            <div className="flex items-center gap-2 mb-4">
+              <Code size={18} className="text-[var(--accent)]" />
+              <p className="text-sm font-semibold text-[var(--text-primary)] tracking-wide uppercase">
+                Technologies I've learned along the way
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {technologies.map((tech, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  className="px-3 py-1.5 text-sm bg-[var(--bg-card)] border border-[var(--border)] rounded-full text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
+                >
+                  {tech}
+                </motion.span>
+              ))}
+            </div>
           </div>
         </Reveal>
 
@@ -52,9 +83,9 @@ export function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
             {[
               { icon: MapPin, label: "Based in", value: "Sydney, AU" },
-              { icon: GraduationCap, label: "Studying", value: "CS + AI" },
-              { icon: Briefcase, label: "Working at", value: "Anthrobyte.ai" },
-              { icon: Heart, label: "Passionate about", value: "Robotics" },
+              { icon: GraduationCap, label: "Studying", value: "CS + AI at UNSW" },
+              { icon: Briefcase, label: "Working at", value: "AI Startup" },
+              { icon: Heart, label: "Hobbies", value: "Swimming, Ping Pong" },
             ].map((item, index) => (
               <motion.div
                 key={index}

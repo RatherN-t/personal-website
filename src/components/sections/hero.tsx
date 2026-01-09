@@ -110,7 +110,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-xl sm:text-2xl text-[var(--text-secondary)] max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed"
           >
-            Building intelligent systems that touch the real world — from prototype to production.
+            Building intelligent systems that touch the real world, from prototype to production.
           </motion.p>
 
           {/* CTAs */}

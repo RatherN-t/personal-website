@@ -46,7 +46,7 @@ const projects: Project[] = [
   {
     title: "ML Rock-Paper-Scissors",
     description:
-      "Built a machine learning system using camera input and Google AI training to classify hand gestures and predict opponent moves in real-time — achieving consistent wins.",
+      "Built a machine learning system using camera input and Google AI training to classify hand gestures and predict opponent moves in real-time, achieving consistent wins.",
     tags: ["Machine Learning", "Computer Vision", "Python"],
     highlight: "Real-time recognition",
     stat: "∞",
@@ -232,7 +232,7 @@ export function Projects() {
               </h2>
             </div>
             <p className="text-[var(--text-secondary)] max-w-md md:text-right">
-              From LEGO EV3 prototypes to AI-first systems — practical builds that
+              From LEGO EV3 prototypes to AI-first systems. Practical builds that
               solve real problems.
             </p>
           </div>

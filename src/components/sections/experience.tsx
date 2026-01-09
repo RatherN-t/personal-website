@@ -131,7 +131,7 @@ export function Experience() {
               </h2>
             </div>
             <p className="text-[var(--text-secondary)] max-w-md md:text-right">
-              From teaching robotics to building AI systems — hands-on roles that shaped my skills.
+              From teaching robotics to building AI systems. Hands-on roles that shaped my skills.
             </p>
           </div>
         </Reveal>

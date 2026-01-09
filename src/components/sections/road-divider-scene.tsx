@@ -145,7 +145,7 @@ export function RoadDividerScene() {
               The <span className="gradient-text">Wow</span> Moment
             </h2>
             <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Scroll to see how the road divider shifts based on traffic load — 
+              Scroll to see how the road divider shifts based on traffic load. 
               a concept I prototyped with LEGO EV3 and ultrasonic sensors.
             </p>
           </div>

@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yash Mittal — AI, Robotics & Practical Prototyping",
+  title: "Yash Mittal | AI, Robotics & Practical Prototyping",
   description:
     "Building intelligent systems that touch the real world. Computer Science student at UNSW Sydney specializing in AI, with a passion for robotics and practical prototyping.",
   keywords: [
@@ -35,15 +35,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_AU",
-    url: "https://yashmittal.dev",
-    title: "Yash Mittal — AI, Robotics & Practical Prototyping",
+    url: "https://yashmittal.tech",
+    title: "Yash Mittal | AI, Robotics & Practical Prototyping",
     description:
       "Building intelligent systems that touch the real world. Computer Science student at UNSW Sydney specializing in AI.",
     siteName: "Yash Mittal",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yash Mittal — AI, Robotics & Practical Prototyping",
+    title: "Yash Mittal | AI, Robotics & Practical Prototyping",
     description:
       "Building intelligent systems that touch the real world. Computer Science student at UNSW Sydney specializing in AI.",
   },
@@ -69,7 +69,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Yash Mittal",
               email: "y.mittal@student.unsw.edu.au",
-              url: "https://yashmittal.dev",
+              url: "https://yashmittal.tech",
               sameAs: ["https://www.linkedin.com/in/yash-mittal-993223352/"],
               jobTitle: "AI Engineer Intern",
               worksFor: {
