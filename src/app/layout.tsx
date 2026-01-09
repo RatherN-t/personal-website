@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 import "./globals.css";
 
@@ -97,6 +98,7 @@ export default function RootLayout({
           <div className="aurora" aria-hidden="true" />
           {children}
         </SmoothScrollProvider>
+        <Analytics />
       </body>
     </html>
   );
