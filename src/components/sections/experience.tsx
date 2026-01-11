@@ -23,8 +23,6 @@ const experiences: Experience[] = [
     location: "Remote",
     description: [
       "Working on human-first AI transformation projects",
-      "[PLACEHOLDER: Replace with specific models/pipelines you worked on]",
-      "[PLACEHOLDER: Replace with specific features or agents you built]",
     ],
     current: true,
     gradient: "from-cyan-500 to-blue-500",
