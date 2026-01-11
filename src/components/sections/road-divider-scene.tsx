@@ -247,7 +247,7 @@ export function RoadDividerScene() {
         {/* CTA */}
         <div className="text-center mt-12">
           <a
-            href="https://www.youtube.com/watch?v=-UOpvuXotTo"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent-warm)] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-[0_0_40px_-8px_var(--accent-warm)] hover:scale-[1.02]"
