@@ -95,12 +95,11 @@ export function About() {
                 <p>
                   Currently an <span className="text-[var(--text-primary)] font-medium">AI Engineer Intern at Anthrobyte.ai</span>, 
                   where I build internal tools, predictive models, and dashboards. I enjoy working across 
-                  the full stack—from data pipelines to deployed services.
+                  the full stack; from data pipelines to deployed services.
                 </p>
 
                 <p>
-                  I'm looking for <span className="text-[var(--accent)]">ML and Software Engineering internships</span> in 
-                  Australia. Outside of work, I enjoy swimming and table tennis.
+                  Outside of work, I enjoy swimming and table tennis.
                 </p>
               </div>
             </Reveal>
