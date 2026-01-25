@@ -6,14 +6,14 @@ import { Reveal } from "@/components/ui/reveal";
 // Tech stack with categories and visual properties - all compact now
 const techStack = [
   { name: "Python", category: "Language", color: "#3776AB" },
-  { name: "TensorFlow", category: "ML/AI", color: "#FF6F00" },
+  { name: "XGBoost", category: "ML", color: "#FF6F00" },
   { name: "FastAPI", category: "Backend", color: "#009688" },
-  { name: "React.js", category: "Frontend", color: "#61DAFB" },
+  { name: "LangChain", category: "ML", color: "#61DAFB" },
   { name: "TypeScript", category: "Language", color: "#3178C6" },
-  { name: "Agentic AI", category: "ML/AI", color: "#8B5CF6" },
-  { name: "MCP Servers", category: "Infrastructure", color: "#06B6D4" },
-  { name: "Data Analysis", category: "Skills", color: "#F97316" },
-  { name: "Excel", category: "Tools", color: "#217346" },
+  { name: "Scikit-learn", category: "ML", color: "#8B5CF6" },
+  { name: "Google Cloud", category: "Cloud", color: "#06B6D4" },
+  { name: "Streamlit", category: "Tools", color: "#F97316" },
+  { name: "PostgreSQL", category: "Database", color: "#336791" },
 ];
 
 function TechCard({ tech, index }: { tech: typeof techStack[0]; index: number }) {
@@ -88,19 +88,19 @@ export function About() {
               <div className="space-y-4 text-base text-[var(--text-secondary)] leading-relaxed">
                 <p>
                   I'm <span className="text-[var(--text-primary)] font-medium">Yash Mittal</span>, 
-                  pursuing a Computer Science degree majoring in <span className="text-[var(--accent)]">Artificial Intelligence</span> at 
+                  a Computer Science student majoring in <span className="text-[var(--accent)]">Artificial Intelligence</span> at 
                   the University of New South Wales.
                 </p>
 
                 <p>
-                  Currently working at an <span className="text-[var(--text-primary)] font-medium">AI startup</span> where 
-                  I designed a cost optimiser to help a supply chain company save money. I love tackling 
-                  interesting challenges and developing innovative solutions.
+                  Currently an <span className="text-[var(--text-primary)] font-medium">AI Engineer Intern at Anthrobyte.ai</span>, 
+                  where I build internal tools, predictive models, and dashboards. I enjoy working across 
+                  the full stack—from data pipelines to deployed services.
                 </p>
 
                 <p>
-                  Outside of work, I enjoy swimming, playing table tennis, and I'm a 
-                  proud tech enthusiast who's watched every <span className="text-[var(--accent)]">WWDC</span> keynote.
+                  I'm looking for <span className="text-[var(--accent)]">ML and Software Engineering internships</span> in 
+                  Australia. Outside of work, I enjoy swimming and table tennis.
                 </p>
               </div>
             </Reveal>

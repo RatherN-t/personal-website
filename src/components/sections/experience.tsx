@@ -22,7 +22,10 @@ const experiences: Experience[] = [
     period: "Dec 2025 – Present",
     location: "Remote",
     description: [
-      "Working on human-first AI transformation projects",
+      "Built internal tool servers using Python and FastAPI for workflow automation",
+      "Developed predictive pricing and cost-optimisation models, improving gross margin by ~10%",
+      "Created Streamlit dashboards for stakeholders to track key metrics",
+      "Deployed services on Google Cloud Platform",
     ],
     current: true,
     gradient: "from-cyan-500 to-blue-500",
@@ -129,7 +132,7 @@ export function Experience() {
               </h2>
             </div>
             <p className="text-[var(--text-secondary)] max-w-md md:text-right">
-              From teaching robotics to building AI systems. Hands-on roles that shaped my skills.
+              My professional experience in software engineering and AI.
             </p>
           </div>
         </Reveal>

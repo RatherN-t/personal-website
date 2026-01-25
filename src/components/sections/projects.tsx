@@ -21,48 +21,47 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Shiftable Road Dividers",
+    title: "Price Intelligence System",
     description:
-      "Designed a prototype using LEGO EV3 and ultrasonic sensors to dynamically shift lane dividers based on traffic load. Presented at IISc Open House to 100+ visitors. Future vision includes GPS data and ML-driven predictions.",
-    tags: ["EV3 Mindstorms", "Sensors", "ML Vision", "NIAS"],
-    highlight: "NIAS Presentation at IISc",
-    stat: "100+",
-    statLabel: "Visitors",
-    image: "/projects/road-dividers/poster.svg",
-    videoUrl: "https://www.youtube.com/watch?v=-UOpvuXotTo",
+      "Web-based pipeline that takes a product name and country as input, scrapes global listings via Serper API, and uses AI guardrails to validate, filter, and normalise noisy price data. Outputs reliable min/median/max prices for pricing decisions.",
+    tags: ["Python", "Serper API", "Data Pipeline", "AI Validation"],
+    highlight: "End-to-end pipeline",
+    stat: "3",
+    statLabel: "Price metrics",
+    image: "/projects/price-intelligence/poster.svg",
     gradient: "from-cyan-500/20 via-blue-500/10 to-transparent",
   },
   {
-    title: "Warren Truss Bridge",
+    title: "Property Yield Prediction",
     description:
-      "Engineered popsicle stick bridges exploring beam, truss, and Warren truss designs. Applied Newton's laws and force distribution principles to achieve exceptional load-bearing capacity.",
-    tags: ["Engineering", "Physics", "Structural Design"],
-    highlight: "Efficiency ratio 250",
-    stat: "25kg",
-    statLabel: "Load capacity",
-    image: "/projects/bridges/poster.svg",
+      "XGBoost regression model to predict rental yields for investment properties. Includes SHAP explainability for feature importance analysis and a FastAPI inference endpoint for real-time predictions.",
+    tags: ["XGBoost", "SHAP", "FastAPI", "ML Pipeline"],
+    highlight: "Explainable ML",
+    stat: "API",
+    statLabel: "Inference",
+    image: "/projects/property-yield/poster.svg",
     gradient: "from-orange-500/20 via-amber-500/10 to-transparent",
   },
   {
-    title: "ML Rock-Paper-Scissors",
+    title: "Legal Document Analysis",
     description:
-      "Built a machine learning system using camera input and Google AI training to classify hand gestures and predict opponent moves in real-time, achieving consistent wins.",
-    tags: ["Machine Learning", "Computer Vision", "Python"],
-    highlight: "Real-time recognition",
-    stat: "∞",
-    statLabel: "Win rate",
-    image: "/projects/rps-ml/poster.svg",
+      "Multi-agent RAG pipeline for automated legal due diligence. Uses LangChain for orchestration and Qdrant for vector storage to extract and summarise key information from PDF contracts.",
+    tags: ["LangChain", "Qdrant", "RAG", "Document AI"],
+    highlight: "Multi-agent RAG",
+    stat: "PDF",
+    statLabel: "Input format",
+    image: "/projects/legal-analysis/poster.svg",
     gradient: "from-violet-500/20 via-purple-500/10 to-transparent",
   },
   {
-    title: "Arduino IoT Car",
+    title: "Gesture Recognition",
     description:
-      "Constructed a remote-controlled car using Arduino board with wireless control via a custom mobile phone application. Full integration of hardware sensors and software control.",
-    tags: ["Arduino", "IoT", "Mobile App", "Hardware"],
-    highlight: "Phone-controlled",
-    stat: "WiFi",
-    statLabel: "Control",
-    image: "/projects/iot-car/poster.svg",
+      "Real-time computer vision system that classifies rock-paper-scissors hand gestures from webcam input. Built as a complete ML pipeline from data capture to model inference.",
+    tags: ["Computer Vision", "Python", "OpenCV", "ML"],
+    highlight: "Real-time CV",
+    stat: "Live",
+    statLabel: "Webcam input",
+    image: "/projects/gesture-recognition/poster.svg",
     gradient: "from-emerald-500/20 via-teal-500/10 to-transparent",
   },
 ];
@@ -232,8 +231,8 @@ export function Projects() {
               </h2>
             </div>
             <p className="text-[var(--text-secondary)] max-w-md md:text-right">
-              From LEGO EV3 prototypes to AI-first systems. Practical builds that
-              solve real problems.
+              ML pipelines, data systems, and backend services. 
+              Projects focused on practical engineering.
             </p>
           </div>
         </Reveal>

@@ -10,8 +10,8 @@ const easeOutExpo: [number, number, number, number] = [0.16, 1, 0.3, 1];
 const quickInfo = [
   { icon: MapPin, label: "Based in", value: "Sydney, AU" },
   { icon: GraduationCap, label: "Studying", value: "CS + AI at UNSW" },
-  { icon: Briefcase, label: "Working at", value: "AI Startup" },
-  { icon: Heart, label: "Hobbies", value: "Swimming, Ping Pong" },
+  { icon: Briefcase, label: "Current Role", value: "AI Engineer Intern" },
+  { icon: Heart, label: "Interests", value: "ML, SWE, Swimming" },
 ];
 
 export function Hero() {
@@ -91,7 +91,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-[var(--accent)] text-sm font-semibold tracking-[0.2em] uppercase mb-4"
           >
-            AI · Robotics · Prototyping
+            Machine Learning · Software Engineering
           </motion.p>
 
           {/* Main headline */}
@@ -109,7 +109,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-xl sm:text-2xl text-[var(--text-secondary)] max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed"
           >
-            Building intelligent systems that touch the real world, from prototype to production.
+            CS student at UNSW majoring in AI. Building practical ML solutions and backend systems.
           </motion.p>
 
           {/* CTAs */}

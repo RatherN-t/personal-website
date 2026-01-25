@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1012"/>
+      <stop offset="100%" style="stop-color:#16181c"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#cardBg)"/>
+  <rect x="0" y="0" width="800" height="450" fill="url(#accent1)"/>
+  
+  <!-- SHAP-style feature importance bars -->
+  <g transform="translate(100, 70)">
+    <text x="0" y="15" font-family="system-ui" font-size="12" fill="#94a3b8">Feature Importance (SHAP)</text>
+    
+    <!-- Feature bars -->
+    <rect x="0" y="35" width="280" height="22" rx="4" fill="#f97316" opacity="0.9"/>
+    <text x="290" y="50" font-family="system-ui" font-size="11" fill="#f8fafc">location_score</text>
+    
+    <rect x="0" y="65" width="220" height="22" rx="4" fill="#fb923c" opacity="0.8"/>
+    <text x="230" y="80" font-family="system-ui" font-size="11" fill="#f8fafc">property_size</text>
+    
+    <rect x="0" y="95" width="180" height="22" rx="4" fill="#fdba74" opacity="0.7"/>
+    <text x="190" y="110" font-family="system-ui" font-size="11" fill="#f8fafc">bedrooms</text>
+    
+    <rect x="0" y="125" width="140" height="22" rx="4" fill="#fed7aa" opacity="0.6"/>
+    <text x="150" y="140" font-family="system-ui" font-size="11" fill="#f8fafc">suburb_median</text>
+    
+    <rect x="0" y="155" width="100" height="22" rx="4" fill="#ffedd5" opacity="0.5"/>
+    <text x="110" y="170" font-family="system-ui" font-size="11" fill="#f8fafc">distance_cbd</text>
+  </g>
+  
+  <!-- Model output panel -->
+  <g transform="translate(480, 70)">
+    <rect width="220" height="200" rx="12" fill="#1e293b" stroke="#f97316" stroke-width="1"/>
+    <text x="110" y="35" text-anchor="middle" font-family="system-ui" font-size="12" fill="#64748b">XGBoost Prediction</text>
+    
+    <text x="110" y="90" text-anchor="middle" font-family="system-ui" font-size="40" font-weight="700" fill="#f97316">5.2%</text>
+    <text x="110" y="115" text-anchor="middle" font-family="system-ui" font-size="12" fill="#94a3b8">Rental Yield</text>
+    
+    <line x1="30" y1="135" x2="190" y2="135" stroke="#334155" stroke-width="1"/>
+    
+    <text x="110" y="160" text-anchor="middle" font-family="system-ui" font-size="11" fill="#64748b">Confidence: 94%</text>
+    <rect x="30" y="170" width="160" height="8" rx="4" fill="#1f2937"/>
+    <rect x="30" y="170" width="150" height="8" rx="4" fill="#f97316"/>
+  </g>
+  
+  <!-- API endpoint -->
+  <rect x="200" y="300" width="400" height="45" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="230" y="327" font-family="monospace" font-size="12" fill="#22c55e">POST</text>
+  <text x="280" y="327" font-family="monospace" font-size="12" fill="#94a3b8">/api/predict</text>
+  <rect x="520" y="310" width="60" height="25" rx="4" fill="#f97316"/>
+  <text x="550" y="327" text-anchor="middle" font-family="system-ui" font-size="11" fill="white">FastAPI</text>
+  
+  <text x="400" y="390" text-anchor="middle" font-family="system-ui" font-size="20" font-weight="600" fill="#f8fafc">Property Yield Prediction</text>
+  <text x="400" y="418" text-anchor="middle" font-family="system-ui" font-size="14" fill="#94a3b8">XGBoost + SHAP + FastAPI</text>
+</svg>
