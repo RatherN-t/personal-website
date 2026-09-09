@@ -93,9 +93,11 @@ export function About() {
                 </p>
 
                 <p>
-                  Currently an <span className="text-[var(--text-primary)] font-medium">AI Engineer Intern at Anthrobyte.ai</span>, 
-                  where I build internal tools, predictive models, and dashboards. I enjoy working across 
-                  the full stack; from data pipelines to deployed services.
+                  Currently <span className="text-[var(--text-primary)] font-medium">co-founder and technical lead at Civly</span>, 
+                  where we turn design input into compliant BIM models and I built the MCP server that lets 
+                  LLM agents read and modify Autodesk Revit models. Before that, founding engineer at hype.kit 
+                  and AI Engineer Intern at Anthrobyte.ai. I enjoy working across the full stack; from data 
+                  pipelines to deployed services.
                 </p>
 
                 <p>

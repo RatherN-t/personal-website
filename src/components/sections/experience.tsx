@@ -8,7 +8,7 @@ interface Experience {
   company: string;
   role: string;
   period: string;
-  location: string;
+  location?: string;
   description: string[];
   current?: boolean;
   logo?: string;
@@ -17,9 +17,33 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    company: "Civly",
+    role: "Co-founder & Technical Lead",
+    period: "Apr 2026 – Present",
+    location: "Sydney",
+    description: [
+      "AI software that turns any design input (CAD, sketch, Rhino) into a compliant LOD 250 BIM model, iterated in plain English",
+      "Built an MCP server for Autodesk Revit so LLM agents can read and modify BIM models",
+      "5 architecture firms in beta; Blackbird Giants Cohort 11",
+    ],
+    current: true,
+    gradient: "from-emerald-500 to-teal-500",
+  },
+  {
+    company: "hype.kit",
+    role: "Founding Engineer (Contract)",
+    period: "Jun 2026 – Aug 2026",
+    description: [
+      "One of two engineers hired to build the product",
+      "Built the RAG system that turns the founders' artist-management knowledge base into the release-strategy recommendations sent to each artist",
+      "Shipped in a closed beta across UK, US, AU and NZ",
+    ],
+    gradient: "from-pink-500 to-rose-500",
+  },
+  {
     company: "Anthrobyte.ai",
     role: "AI Engineer Intern",
-    period: "Dec 2025 – Present",
+    period: "Dec 2025 – Feb 2026",
     location: "Remote",
     description: [
       "Built internal tool servers using Python and FastAPI for workflow automation",
@@ -27,7 +51,6 @@ const experiences: Experience[] = [
       "Created Streamlit dashboards for stakeholders to track key metrics",
       "Deployed services on Google Cloud Platform",
     ],
-    current: true,
     gradient: "from-cyan-500 to-blue-500",
   },
   {
@@ -96,10 +119,12 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
           <Calendar size={14} />
           <span>{experience.period}</span>
         </div>
-        <div className="flex items-center gap-1.5">
-          <MapPin size={14} />
-          <span>{experience.location}</span>
-        </div>
+        {experience.location && (
+          <div className="flex items-center gap-1.5">
+            <MapPin size={14} />
+            <span>{experience.location}</span>
+          </div>
+        )}
       </div>
 
       {/* Description */}
