@@ -181,7 +181,7 @@ export function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               className="absolute -bottom-4 -left-4 px-3 py-2 glass rounded-xl border border-[var(--border)] z-20"
             >
-              <p className="text-xs font-semibold text-[var(--accent-warm)]">AI Engineer Intern</p>
+              <p className="text-xs font-semibold text-[var(--accent-warm)]">Co-founder, Civly</p>
             </motion.div>
           </div>
         </motion.div>

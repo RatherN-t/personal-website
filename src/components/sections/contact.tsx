@@ -50,7 +50,7 @@ export function Contact() {
         <Reveal delay={0.2}>
           <div className="flex items-center justify-center gap-4">
             <motion.a
-              href="https://www.linkedin.com/in/yash-mittal-993223352/"
+              href="https://linkedin.com/in/yash-mit"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}
@@ -62,7 +62,7 @@ export function Contact() {
             </motion.a>
 
             <motion.a
-              href="https://github.com/yashmittal4"
+              href="https://github.com/RatherN-t"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}

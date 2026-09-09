@@ -18,9 +18,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yash Mittal | AI, Robotics & Practical Prototyping",
+  title: "Yash Mittal | Co-founder at Civly, CS/AI at UNSW",
   description:
-    "Building intelligent systems that touch the real world. Computer Science student at UNSW Sydney specializing in AI, with a passion for robotics and practical prototyping.",
+    "Co-founder and technical lead at Civly, AI software that turns design input into compliant BIM models. Computer Science (AI) student at UNSW Sydney.",
   keywords: [
     "Yash Mittal",
     "AI",
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_AU",
     url: "https://yashmittal.tech",
-    title: "Yash Mittal | AI, Robotics & Practical Prototyping",
+    title: "Yash Mittal | Co-founder at Civly, CS/AI at UNSW",
     description:
       "Building intelligent systems that touch the real world. Computer Science student at UNSW Sydney specializing in AI.",
     siteName: "Yash Mittal",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yash Mittal | AI, Robotics & Practical Prototyping",
+    title: "Yash Mittal | Co-founder at Civly, CS/AI at UNSW",
     description:
       "Building intelligent systems that touch the real world. Computer Science student at UNSW Sydney specializing in AI.",
   },
@@ -71,7 +71,7 @@ export default function RootLayout({
               name: "Yash Mittal",
               email: "y.mittal@student.unsw.edu.au",
               url: "https://yashmittal.tech",
-              sameAs: ["https://www.linkedin.com/in/yash-mittal-993223352/"],
+              sameAs: ["https://linkedin.com/in/yash-mit"],
               jobTitle: "AI Engineer Intern",
               worksFor: {
                 "@type": "Organization",
